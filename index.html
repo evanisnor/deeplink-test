@@ -1,0 +1,144 @@
+<html>
+<head>
+<style>
+	.section {
+		font-size: 12px;
+		text-decoration: none;
+		font-family: Helvetica;
+	}
+
+	.section .title {
+		font-weight: bold;
+		font-size: 30px;
+		font-family: Helvetica;
+	}
+
+	.section a {
+		font-size: 24px;
+		text-decoration: none;
+		font-family: Helvetica;
+	}
+
+</style>	
+</head>
+<body>
+
+<div class="section">
+<div class="title">GSO | jprice@mfs.com</div>
+<a href="com.salesforce.fieldservice://v1/sObject/003B000000GEzNiIAL">Contact</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000XefKIAS/overview">Service Appointment</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5gIOAS">Work Order</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5gIOAS/products">Work Order/Products</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5gIOAS/related">Work Order/Related</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5gIOAS/details">Work Order/Details</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/003B000000GEezPOOP/details">Invalid Record Id</a><br>
+<a href="com.salesforce.fieldservice://v1/sobject/0WOB0000000I5gIOAS/relAted">Related (Case Sensitive)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB00000000NeJOAU/location">Missing Tab</a><br>
+</div>
+
+<br><br>
+
+<div class="section">
+<div class="title">Quick Actions</div>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/quickaction/create_service_appointment?param1=val1&param2=val2">create_service_appointment</a> (Create Record)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/quickaction/JPFileUploadQuickAction">JPFileUploadQuickAction</a> (WO)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000XefKIAS/quickaction/JPFileUploadQuickAction">JPFileUploadQuickAction</a> (SA)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/1WLB0000000HZs6OAG/quickaction/JPFileUploadQuickAction">JPFileUploadQuickAction</a> (WOLI - Invalid)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000XefKIAS/quickaction/ChangeStatus">Change Status</a> (WO)<br>
+
+<br><br>
+
+<div class="section">
+<div class="title">App Extensions</div>
+<a href="com.salesforce.fieldservice://v1/sObject/1WLB0000000HZs6OAG/flow/JP_Upload_FIle">JP_Upload_FIle</a> (WOLI)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt">JPFileUploadAppExt</a> (WO)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt">JPFileUploadAppExt</a> (WO)<br>
+</div>
+
+<br><br>
+
+<div class="section">
+<div class="title">Special Characters Test</div>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/file_upload!?param1=value1&param2=value 2 contains a full sentence with spaces and ! extra special ch@ars :)&param3=value.3">file_upload!</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt🤦‍♂️">JPFileUploadAppExt</a> (emoji 🤦‍♂️)<br>
+</div>
+
+<br><br>
+
+<div class="section">
+<div class="title">Special/Error Cases</div>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/#file upload!">#file upload!</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/%23file%20upload%21">%23file%20upload%21</a> (Url Encoded)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/quickaction/">Incomplete QuickAction Url</a> (trailing /)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow">Incomplete Flow Url</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/quickaction/delete">Delete</a> (non-existent)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/delete">Delete</a> (non-existent)<br>
+</div>
+
+<br><br>
+
+<div class="section">
+<div class="title">Hard-Coded</div>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/edit">Edit (WO)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/1WLB0000000HZs6OAG/edit">Edit (WOLI)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000QQrEIAW/edit">Edit (SA)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/createservicereport">Create Service Report</a><br>
+</div>
+
+<br><br><hr>
+
+<div class="section">
+<div class="title">STMPA | kimtech@m1.mfs2.com</div>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000000xrjOAA/quickaction/ParamsPassing?userParam=KimParam">WO ParamPassing</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/quickaction/ParamsPassing?userParam=KimParam">SA ParamPassing</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000000xrjOAA/quickaction/JPMobileExtTest?userParam=KimParam&param2=My%20Param%20Value2">JPMobileExtTest</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/quickaction/Flappy_SA">SA Flappy</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/flow/Google%20iOS">Google iOS</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/flow/Google">Google</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/edit">Edit (WO)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/quickaction/edit">Edit</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/createservicereport">Create Service Report</a><br>
+<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000000xrjOAA/quickaction/JPMobileExtTest?param1=This is a long, unescaped piece of text&param2=even longer than the last piece of text, this text is also unescaped.">JPMobileExtTest (Crazy Input)</a><br>
+
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000000xrjOAA/quickaction/JPMobileExtTest?param1=This is a long, unescaped piece of text&param2=even longer than the last piece of text, this text is also unescaped and has an emoji 👍.">JPMobileExtTest (Crazy Input)</a><br>
+
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001IsPIAU/flow/Deep_Link_Params?numberParam=44.12345&currencyParam=19.987&booleanParam=true&dateParam=2015-01-22%27&dateTimeParam=2019-12-11T10%3A01%3A00.000%2B0000&textParam=This%20is%20a%20long%2C%20unescaped%20piece%20of%20text%26param2%3Deven%20longer%20than%20the%20last%20piece%20of%20text%2C%20this%20text%20is%20also%20unescaped%20and%20has%20an%20emoji%20%F0%9F%91%8D.">Deep_Link_Params (SA)</a><br>
+</div>
+
+<br>
+<br>
+<hr>
+
+<div class="section">
+<div class="title">GS0 | seth.clark@mfs.com</div>
+<a href="com.salesforce.fieldservice://v1/sobject/08pB0000000Hxj0IAC/quickaction/Screen_Fields?long_text_param=testing%20data%20injection%20text&date_time_param=2020-02-18T19%3A07%3A32Z&date_param=2019-02-18T19%3A07%3A32Z&currency_param=12%2E35&number_param=53%2E1234&checkbox_param=true&text_param=Short%20Text">Data injection</a><br>
+</div>
+
+<br><br><hr>
+
+<div class="section">
+<div class="title">STMPA | jprice@fsl.com</div>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001K9ZIAU/quickaction/ScreenFlowSA?full_name_value=Testy%20McTesterson&description_value=This%20is%20a%20long%2C%20unescaped%20piece%20of%20text%20even%20longer%20than%20the%20last%20piece%20of%20text%2C%20this%20text%20is%20also%20unescaped%20and%20has%20an%20emoji%20%F0%9F%A4%B7%E2%80%8D%E2%99%82%EF%B8%8F.&purchase_price_value=50&checkbox_choice_value=First%20Item">ScreenFlowSA + Data (SA)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000001aqrOAA/quickaction/ScreenFlowSA?userParam=KimParam">ScreenFlowSA (WO)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/003R0000009bxVuIAI/quickaction/ScreenFlowContact?userParam=KimParam">ScreenFlowContact (Contact)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001K9ZIAU/createservicereport">Create SR</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pR00000001K9ZIAU/edit">Edit SA</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000001aqrOAA/edit">Edit WO</a><br>
+</div>
+
+<br><br><hr>
+
+<div class="section">
+<div class="title">Bug-Blitz Links | Login: jmardis@mfs.com | salesforce1</div>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000Xe2dIAC/flow/Flow_with_Formula?title=my title&var1=value1&var2=value2">Tap Me</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000Xe2dIAC/quickaction/Work_Order_Fast_Lookup?flowTitle=Work Order Fast Lookup 123&var1=value1&var2=value2">Tap Me</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000Xe2dIAC/edit">Tap Me</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB00000004CeGIAU/createservicereport">Tap Me</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOR00000000xrjOAA/quickaction/Jerrell_Param_Passing_Test?foo=bar&baz=qux">Tap Me</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000Hxj0IAC/quickaction/screen_fields?long_text_param=test%20text&date_time_param=2019-11-11T17%3A01%3A00.000%2B0000&date_param=2019-12-11T17%3A01%3A00.000%2B0000&currency_param=12%2E35&number_param=53%2E1234&checkbox_param=TRUE&text_param=Short%20Text">Tap Me</a><br>
+
+</div>
+</body>
+</html>
+
