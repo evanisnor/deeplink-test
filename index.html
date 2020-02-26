@@ -53,13 +53,14 @@
 <a href="com.salesforce.fieldservice://v1/sObject/1WLB0000000HZs6OAG/flow/JP_Upload_FIle">JP_Upload_FIle</a> (WOLI)<br>
 <a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt">JPFileUploadAppExt</a> (WO)<br>
 <a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt">JPFileUploadAppExt</a> (WO)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/Service_Report_Flow">Service Report Flow (Closure)</a><br>
 </div>
 
 <br><br>
 
 <div class="section">
 <div class="title">Special Characters Test</div>
-<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/file_upload!?param1=value1&param2=value 2 contains a full sentence with spaces and ! extra special ch@ars :)&param3=value.3">file_upload!</a><br>
+<!--<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/file_upload!?param1=value1&param2=value 2 contains a full sentence with spaces and ! extra special ch@ars :)&param3=value.3">file_upload!</a><br>-->
 <a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt🤦‍♂️">JPFileUploadAppExt</a> (emoji 🤦‍♂️)<br>
 </div>
 
@@ -79,10 +80,22 @@
 
 <div class="section">
 <div class="title">Hard-Coded</div>
-<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/edit">Edit (WO)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/edit?Status=On-Hold&Phone_Field__c=5551234567&Email_Field__c=j.price%40salesforce.com&Subject=%E9%80%99%E6%98%AF%E8%BC%B8%E5%85%A5%E5%88%B0Google%E7%BF%BB%E8%AD%AF%E4%B8%AD%E7%9A%84%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%96%87%E6%9C%AC%20%F0%9F%91%A8%E2%80%8D%F0%9F%91%A9%E2%80%8D%F0%9F%91%A7%E2%80%8D%F0%9F%91%A7">Edit (WO w/Params)</a><br>
 <a href="com.salesforce.fieldservice://v1/sObject/1WLB0000000HZs6OAG/edit">Edit (WOLI)</a><br>
 <a href="com.salesforce.fieldservice://v1/sObject/08pB0000000QQrEIAW/edit">Edit (SA)</a><br>
 <a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/createservicereport">Create Service Report</a><br>
+</div>
+
+<br><br>
+
+<div class="section">
+<div class="title">Duplicate Names</div>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/edit?Status=On-Hold&Phone_Field__c=5551234567&Email_Field__c=j.price%40salesforce.com&Subject=%E9%80%99%E6%98%AF%E8%BC%B8%E5%85%A5%E5%88%B0Google%E7%BF%BB%E8%AD%AF%E4%B8%AD%E7%9A%84%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%96%87%E6%9C%AC%20%F0%9F%91%A8%E2%80%8D%F0%9F%91%A9%E2%80%8D%F0%9F%91%A7%E2%80%8D%F0%9F%91%A7">Edit (WO w/Params)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/1WLB0000000HZs6OAG/edit">Edit (WOLI)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000QQrEIAW/edit">Edit (SA)</a><br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/flow/JPFileUploadAppExt">JPFileUploadAppExt</a> (WO, Defined as both iOS/Flow)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/0WOB0000000I5ghOAC/quickaction/JPFileUploadQuickAction">JPFileUploadQuickAction</a> (WO)<br>
+<a href="com.salesforce.fieldservice://v1/sObject/08pB0000000XefKIAS/quickaction/JPFileUploadQuickAction">JPFileUploadQuickAction</a> (SA)<br>
 </div>
 
 <br><br><hr>
