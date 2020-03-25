@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+	.section {
+		font-size: 15px;
+		text-decoration: none;
+		font-family: Helvetica;
+	}
+
+	.section .title {
+		font-weight: bold;
+		font-size: 30px;
+		font-family: Helvetica;
+	}
+
+	.section a {
+		font-size: 20px;
+		text-decoration: none;
+		font-family: Helvetica;
+	}
+
+	.form {
+		margin: 24px;		
+	}
+
+	.form input {
+		margin: 5px 10px 15px 0px;
+		padding: 2px;
+	}
+
+	.form select {
+		margin: 5px 0px 25px 0px;
+	}
+
+	#done {
+		background-color: #d9ecfa;
+		font-weight: bold;
+		padding: 5px;
+		border-radius: 2px;
+	}
+
+	.deeplink-input {
+		font-size: 12px;
+		text-decoration: none;
+		font-family: Helvetica;
+		margin-bottom: 5px;
+		padding: 0px 10px 0px 5px;
+	}
+
+	#paramList {
+		margin: 10px 0px 10px 0px;
+	}
+
+	#parambutton {
+		background-color: #d9ecfa;
+		font-weight: bold;
+		font-size: 15px;
+		border-radius: 2px;
+	}
+
+	#qrcode {
+	  	width: 160px;
+	  	height: 160px;
+	  	margin: 15px 15px 15px 15px;
+	}
+</style>
+
+<script type="text/javascript" src="qrcode.min.js"></script>
+<script>
+'use strict';
+
+let globalParamsRowCount = 0;
+
+function makeDeepLink() {
+	let sObjectId = document.getElementById('sObjectId').value;
+	let action = document.getElementById('action').value;
+	let actionTypeInput = document.getElementById('actionType');
+	let actionType = actionTypeInput.options[actionTypeInput.selectedIndex].value;
+	let baseUrl = 'com.salesforce.fieldservice://v1/sObject';
+
+	let parts = [baseUrl, sObjectId, actionType, action];
+	let url = parts.join('/');
+
+	let params = getParameters();
+	if(params.length > 0) {
+		url += '?' + params.join('&');
+	}
+
+	let output = document.getElementById('output');
+	output.innerHTML = '';
+	let a = document.createElement('a');
+	let text = document.createTextNode(url);	
+	a.appendChild(text);
+	a.href = url;
+	output.appendChild(a);
+	generateQR(url);
+	
+}
+
+function addParameter() {
+	let count = globalParamsRowCount;
+	let rowName = 'row' + count;
+
+	let container = document.getElementById('container');
+	let section = document.createElement("div");
+	let keyInput = document.createElement('input');
+
+	keyInput.type = 'text';
+	keyInput.id = rowName + 'Key';
+	section.appendChild(keyInput);
+	
+	let valInput = document.createElement('input');
+	valInput.type = 'text';
+	valInput.id = rowName + 'Value';
+	section.appendChild(valInput);
+
+	let deleteButton = document.createElement('input');
+	deleteButton.type = 'button';
+	deleteButton.name = rowName + 'Button';
+	deleteButton.value = ' - ';
+	deleteButton.id = 'parambutton';
+	deleteButton.onclick = function() { 
+		section.parentNode.removeChild(section);
+		if (globalParamsRowCount > 0) {
+			globalParamsRowCount--;
+		}
+	}
+	section.appendChild(deleteButton);
+	container.appendChild(section);
+
+	globalParamsRowCount++;
+}
+
+function getParameters() {	
+	let params = [];
+	for(let index=0; index < globalParamsRowCount; index++) {
+		let keyName = 'row' + index + 'Key';
+		let valName = 'row' + index + 'Value';
+		let keyInput = document.getElementById(keyName);
+		let valInput = document.getElementById(valName);
+		let keyValuePair = keyInput.value + '=' + valInput.value;
+		params.push(keyValuePair);
+	}
+
+	return params;
+}
+
+</script>
+</head>
+<body>
+
+<div class="section">	
+	<div class="form">
+		<label for="sObjectId">sObjectId</label><br>
+		<input type="text" name="sObjectId" id="sObjectId" class='deeplink-input' minlength=15 maxlength=18 placeholder="eg. 08pR00000001K9ZIAU"><br>
+
+		<label for="actionType">Action Type</label><br>
+		<select name="actionType" id="actionType" class="deeplink-input">
+			<option value="flow">Flow</option>
+			<option value="quickaction">Quick Action</option>
+		</select><br>
+
+		<label for="action">Action</label><br>
+		<input type="text" name="action" id="action" class='deeplink-input' placeholder="eg. MyFlow"><br>
+		
+		<div id="paramList">
+			<label for="params">Add Parameters</label>
+			<input type="button" value=" + " id="parambutton" name="addParamButton" id="addParamButton" onClick="javascript: addParameter();">
+			<div id="container"/>
+		</div>
+		
+		<br>
+		<input type="button" value="Create Link" name="done" id="done" onClick="javascript: makeDeepLink()">
+	</div>
+</div>
+
+<div id="output"></div>
+<div id="qrcode"></div><br>
+
+<script type="text/javascript">
+	
+var qrcode = new QRCode(document.getElementById("qrcode"));
+
+function generateQR(qrdata) {	
+	qrcode.makeCode(qrdata);
+}
+</script>
+</body>
+</html>
+
